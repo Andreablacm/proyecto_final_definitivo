@@ -1,30 +1,35 @@
 @use '../mixins/hover.scss' as *;
+@use '../mixins/responsive.scss' as *;
 
 .programs__section {
-    margin: 20px 0 30px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  margin: 20px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.programs__title{
-    font-family: 'Hind Guntur', sans-serif;
-    font-weight: 500;
-}
-
-.icons{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 12px;
-    width: 100%;
-
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  @include responsive(laptop) {
+    margin-bottom: 20px;
+  }
 }
 .program {
-    width: 50px;
-    height: 50px;
-    @include hover {
-        scale: 1.2;
-    }
+  width: 50px;
+  height: 50px;
+  @include hover {
+    scale: 1.2;
+  }
+}
+.programs__section {
+  @include responsive(laptop) {
+    width: 400px;
+    height: 150px;
+    background-color: #00000087;
+  }
 }

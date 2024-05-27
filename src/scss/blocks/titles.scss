@@ -1,1 +1,50 @@
+@use '../mixins/responsive.scss' as *;
+.card__title {
+  font-family: 'Hind Guntur', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0;
+  color: rgb(42, 42, 42);
+  @include responsive(laptop) {
+    font-size: 28px;
+  }
+}
 
+.card__subtitle {
+  font-family: 'Crimson', sans-serif;
+  margin: 0;
+  font-size: 20px;
+  color: rgb(42, 42, 42);
+  font-weight: 100;
+  @include responsive(laptop) {
+    font-size: 22px;
+  }
+}
+.others__subtitles {
+  font-weight: 600;
+}
+.section__title {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-family: 'Hind Guntur', sans-serif;
+  font-size: 1.5rem;
+}
+.section__subtitle {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+.isometric__title {
+  color: rgb(56, 56, 56);
+}
+.isometric__subtitle {
+  color: rgb(56, 56, 56);
+  margin-bottom: 30px;
+  font-family: 'Crimson', sans-serif;
+}
+.programs__title {
+  color: white;
+  font-family: 'Hind Guntur', sans-serif;
+  font-weight: 500;
+}
