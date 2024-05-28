@@ -29,6 +29,10 @@
   font-weight: 500;
   font-family: 'Hind Guntur', sans-serif;
   font-size: 1.5rem;
+  @include responsive(laptop) {
+    margin: 0 ;
+  
+  }
 }
 .section__subtitle {
   margin: 0;
@@ -37,14 +41,28 @@
 }
 .isometric__title {
   color: rgb(56, 56, 56);
+  @include responsive(laptop) {
+    margin-top: 50px;
+  }
+
 }
 .isometric__subtitle {
   color: rgb(56, 56, 56);
   margin-bottom: 30px;
   font-family: 'Crimson', sans-serif;
+  @include responsive(laptop) {
+    text-align: center;
+  }
+
 }
 .programs__title {
-  color: white;
+  color: rgb(56, 56, 56);
   font-family: 'Hind Guntur', sans-serif;
   font-weight: 500;
+  margin-top: 0;
+  @include responsive(laptop) {
+    color: #ffffff;
+  
+  }
+
 }

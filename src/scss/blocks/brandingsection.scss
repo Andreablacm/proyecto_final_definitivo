@@ -1,3 +1,5 @@
+@use '../mixins/responsive.scss' as *;
+
 .branding__section{
     display: flex;
     height: 100%;
@@ -13,4 +15,12 @@
 .mockup__santos{
     border-radius: 10px;
     box-shadow: 0 0 5px 2px #ffffff0f;
+}
+.uchiwa {
+    background-color:rgb(215, 211, 237);
+    height: 100%;
+    margin-top: 10px;
+    @include responsive(laptop) {
+        margin-top: 40px;
+      }
 }
