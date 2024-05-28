@@ -1,30 +1,66 @@
+@use '../mixins/responsive.scss' as *;
 .header {
-    margin: 24px;
-    font-size: 0.875rem;
-    font-family:'Crimson', sans-serif;
-    color: rgb(56, 56, 56);
+  margin: 24px;
+  font-size: 0.875rem;
+  font-family: 'Crimson', sans-serif;
+  color: rgb(56, 56, 56);
+
+  @include responsive(laptop) {
+    margin: 28px;
+    font-size: 1rem;
+  }
 }
-.information {
+.header_box {
+  @include responsive(laptop) {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 3px;
+    justify-content: space-between;
+  }
 }
+.information {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3px;
+
+  @include responsive(laptop) {
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
+.info__header {
+  @include responsive(laptop) {
+    margin: 0;
+  }
+}
+
 .name {
-    margin-top: 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: flex-end;
+
+  @include responsive(laptop) {
     display: flex;
-    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0;
+  }
 }
 .button__container {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 .button {
-    padding: 8px 16px;
-    border-radius: 20px;
-    background-color: rgba(132, 0, 255, 0.273);
-    backdrop-filter: blur(2px);
-    box-shadow: 0 0 3px 1px #00000026;
-    
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: rgba(132, 0, 255, 0.273);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 3px 1px #00000026;
+  border: none;
+  cursor: pointer;
+  @include responsive(laptop) {
+    padding: 10px 18px;
+  }
 }

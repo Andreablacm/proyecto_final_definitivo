@@ -1,3 +1,5 @@
+@use '../mixins/responsive.scss' as *;
+
 html {
   scroll-behavior: smooth;
 }
@@ -8,4 +10,9 @@ body {
   background-image: url(../../assets/images/abstract-wallpaper1movile.jpg);
   background-repeat: no-repeat;
   background-size: 370px;
+
+  @include responsive(laptop) {
+    background-image: url(../../assets/images/abstract-wallpaper3.jpg);
+    background-size: 100%;
+  }
 }
